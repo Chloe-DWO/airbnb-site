@@ -5,7 +5,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>CottageOnKei — Travfica</title>
-  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
    <header>
@@ -20,46 +20,132 @@
   <nav class="nav-links">
     <a href="index.html">Home</a>
     <div class="dropdown">
-      <a href="rooms.html">Accommodations ▾</a>
+      <a href="#">Accommodations ▾</a>
       <div class="dropdown-content">
-        <a href="rooms.html#student">Student </a>
-        <a href="rooms.html#exclusive">Exclusive</a>
+        <a href="#">Student </a>
+        <a href="#">Exclusive</a>
       </div>
     </div>
-    <a href="host.html">Host</a>
-    <a href="partners.html">Partners</a>
+    <a href="#">Host</a>
+    <a href="#">Partners</a>
   </nav>
 
   <!-- Hamburger Icon (mobile) -->
   <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="rooms.html#student">Student</a>
-    <a href="rooms.html#exclusive">Exclusive</a>
-    <a href="host.html">Host</a>
-    <a href="partners.html">Partners</a>
+  <!-- Mobile Navigation -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+
+  <!-- Dropdown for Rooms -->
+  <div class="mobile-dropdown">
+    <button class="dropbtn">Accommodations ▾</button>
+    <div class="mobile-dropdown-content">
+      <a href="#">Student </a>
+      <a href="#">Exclusive</a>
+    </div>
   </div>
+
+  <a href="#">Featured Activities</a>
+  <a href="#">Become a Host</a>
+  <a href="#">Partners</a>
+</div>
+
 </header>
 
   <section class="room-detail">
-    <h2>CottageOnKei</h2>
-    <p>Peaceful garden cottage — perfect for the tired traveler.</p>
-    <div class="detail-gallery">
-      <img src="../images/Pendray14.jpg" alt="Garden View">
-      <img src="../images/Pendray17.jpg" alt="Pool View">
-      <img src="../images/Pendray7.jpg" alt="Living Room">
+
+  <!-- HERO -->
+  <div class="room-hero">
+    <img src="./images/Pendray2.jpg" alt="CottageOnKei">
+    <div class="hero-overlay">
+      <h1>CottageOnKei</h1>
+      <p1>Garden cottage · Calm · Nature escape</p1>
     </div>
-    <h3>Price: R 1,800 / night</h3>
-    <h3>Contact Owner</h3>
-    <p>📧 cottageonkei@travfica.com | 📱 +27 81 242 1880</p>
-    <h3>Reviews</h3>
-    <p>⭐ 4.9 — “Beautiful and clean space!”</p>
-  </section>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="detail-gallery">
+    <img src="./images/Pendray1.jpg">
+    <img src="./images/Pendray7.jpg">
+    <img src="./images/Pendray6.jpg">
+    
+  </div>
+
+  <!-- CONTENT GRID -->
+  <div class="room-info-grid">
+
+    <!-- LEFT SIDE -->
+    <div class="room-main-info">
+
+      <h3>About this stay</h3>
+      <p>
+        Tucked away in a peaceful garden setting, this cottage offers a relaxing
+        escape from the noise of everyday life. Perfect for families or travelers
+        seeking comfort, privacy, and nature.
+      </p>
+
+      <h3>Amenities</h3>
+      <ul class="amenities">
+        <li>🌿 Private garden</li>
+        <li>🌿 Swimming pool access</li>
+        <li>🌿 Fully equipped kitchen</li>
+        <li>🌿 Secure parking</li>
+      </ul>
+
+      <h3>Reviews</h3>
+      <div class="review-box">
+        ⭐ 4.9  
+        <p>“Absolutely peaceful and beautifully maintained. A true getaway!”</p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE (BOOKING CARD) -->
+    <div class="booking-box">
+      <h2>R 1,800 <span>/ night</span></h2>
+
+      
+
+      <div class="contact2">
+        <h3>Contact Pendray</h3><br/>
+        <p> <b>Email:</b> hello@travfica.com</p>
+        <p><b>Phone:</b> +27 81 242 1880</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
   <footer>
     <div class="footer-bottom">© 2026 Travfica · Travel Safe. Travel Smart.</div>
   </footer>
+
+  <script>
+// Create lightbox container
+const lightbox = document.createElement('div');
+lightbox.id = 'lightbox';
+document.body.appendChild(lightbox);
+
+const img = document.createElement('img');
+lightbox.appendChild(img);
+
+// Add click event to gallery images
+document.querySelectorAll('.detail-gallery img, .room-hero img').forEach(image => {
+  image.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    img.src = image.src;
+    img.alt = image.alt;
+  });
+});
+
+// Close lightbox when clicked
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+</script>
+
 </body>
 </html>

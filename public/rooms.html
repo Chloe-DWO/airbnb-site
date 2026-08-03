@@ -4,67 +4,171 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Travfica — Available Rooms</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Travfica | Rooms</title>
+  <link rel="stylesheet" href="./style.css"/>
 </head>
+
 <body>
-   <header>
-  <!-- Logo (clickable back to home) -->
+
+<header>
   <div class="logo">
     <a href="index.html">
       <img src="images/Travificalogo.jpg.png" alt="Travfica Logo">
     </a>
   </div>
 
-  <!-- Desktop Navigation -->
   <nav class="nav-links">
     <a href="index.html">Home</a>
+
     <div class="dropdown">
       <a href="rooms.html">Accommodations ▾</a>
       <div class="dropdown-content">
-        <a href="rooms.html#student">Student </a>
-        <a href="rooms.html#exclusive">Exclusive</a>
+        <a href="#student">Student</a>
+        <a href="#exclusive">Exclusive</a>
       </div>
     </div>
+
     <a href="host.html">Host</a>
     <a href="partners.html">Partners</a>
   </nav>
 
-  <!-- Hamburger Icon (mobile) -->
   <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
-    <a href="rooms.html#student">Student</a>
-    <a href="rooms.html#exclusive">Exclusive</a>
-    <a href="host.html">Host</a>
+
+    <div class="mobile-dropdown">
+      <button class="dropbtn">Accommodations ▾</button>
+      <div class="mobile-dropdown-content">
+        <a href="#student">Student</a>
+        <a href="#exclusive">Exclusive</a>
+      </div>
+    </div>
+
+    <a href="featuredactivities.html">Featured Activities</a>
+    <a href="host.html">Become a Host</a>
     <a href="partners.html">Partners</a>
   </div>
 </header>
 
-  <section class="rooms">
-    <h2>Available Rooms</h2>
-    <div class="room-grid">
+
+<main class="rooms-layout">
+
+  <!-- Sidebar -->
+  <aside class="filters-sidebar">
+    <h3>Filter Rooms</h3>
+
+    <input type="text" placeholder="Search rooms...">
+
+    <select>
+      <option>Beds</option>
+      <option>1 Bed</option>
+      <option>2 Beds</option>
+      <option>3+ Beds</option>
+    </select>
+
+    <select>
+      <option>Baths</option>
+      <option>1 Bath</option>
+      <option>2 Baths</option>
+    </select>
+
+    <select>
+      <option>Outdoor</option>
+      <option>Balcony</option>
+      <option>Garden</option>
+    </select>
+
+    <select>
+      <option>Pet Friendly</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+
+    <button class="btn">Apply Filters</button>
+  </aside>
+
+
+  <!-- Rooms -->
+  <section class="rooms-content">
+    <h2>Our Rooms</h2>
+
+    <div class="rooms-grid">
+
+      <!-- Room 1 -->
       <div class="room-card">
-        <img src="images/bedroom.jpg" alt="StudioOnKei">
-        <h3>StudioOnKei</h3>
-        <p>Modern studio with essentials.</p>
-        <p class="price">R 1,200 / night</p>
-        <a href="room-studioonkei.html" class="btn">View Details</a>
+        <img src="images/bedroom.jpg">
+        <div class="room-info">
+          <h3>StudioOnKei</h3>
+          <p>Modern studio with essentials.</p>
+          <p class="price">R 1,200 / night</p>
+          <a href="room-studioonkei.html" class="btn">View</a>
+        </div>
       </div>
+
+      <!-- Room 2 -->
       <div class="room-card">
-        <img src="images/Pendray15.jpg" alt="CottageOnKei">
-        <h3>CottageOnKei</h3>
-        <p>Peaceful garden cottage for families.</p>
-        <p class="price">R 1,800 / night</p>
-        <a href="room-cottageonkei.html" class="btn">View Details</a>
+        <img src="images/Pendray15.jpg">
+        <div class="room-info">
+          <h3>CottageOnKei</h3>
+          <p>Peaceful family cottage.</p>
+          <p class="price">R 1,800 / night</p>
+          <a href="room-cottageonkei.html" class="btn">View</a>
+        </div>
       </div>
+
+      <!-- NEW PLACEHOLDER ROOMS -->
+      <div class="room-card">
+        <img src="images/bedroom.jpg">
+        <div class="room-info">
+          <h3>Beachside Escape</h3>
+          <p>Ocean views & fresh air.</p>
+          <p class="price">R 2,200 / night</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <img src="images/Pendray15.jpg">
+        <div class="room-info">
+          <h3>Luxury Villa</h3>
+          <p>Spacious & elegant stay.</p>
+          <p class="price">R 3,500 / night</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <img src="images/bedroom.jpg">
+        <div class="room-info">
+          <h3>City Apartment</h3>
+          <p>Perfect for business trips.</p>
+          <p class="price">R 1,400 / night</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <img src="images/Pendray15.jpg">
+        <div class="room-info">
+          <h3>Garden Retreat</h3>
+          <p>Quiet & relaxing environment.</p>
+          <p class="price">R 1,900 / night</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <footer>
-    <div class="footer-bottom">© 2026 Travfica · Travel Safe. Travel Smart.</div>
-  </footer>
+</main>
+
+
+<footer>
+  <div class="footer-bottom">
+    © 2026 Travfica · Travel Safe. Travel Smart.
+  </div>
+</footer>
+
 </body>
 </html>

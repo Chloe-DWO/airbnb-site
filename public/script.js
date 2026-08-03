@@ -59,8 +59,17 @@ if (hostForm) {
     // and keep the alert as a friendly confirmation.
   });
 }
-// Mobile menu toggle
+// Toggle mobile menu
 function toggleMenu() {
   const menu = document.getElementById("mobileMenu");
-  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  menu.classList.toggle("active");
 }
+
+// Toggle dropdown inside mobile menu
+document.querySelectorAll('.mobile-dropdown .dropbtn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.parentElement.classList.toggle('active');
+  });
+});
+
+

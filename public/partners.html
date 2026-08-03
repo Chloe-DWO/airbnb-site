@@ -5,7 +5,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Partners — Travfica</title>
-  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
    <header>
@@ -33,14 +33,24 @@
   <!-- Hamburger Icon (mobile) -->
   <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="rooms.html#student">Student</a>
-    <a href="rooms.html#exclusive">Exclusive</a>
-    <a href="host.html">Host</a>
-    <a href="partners.html">Partners</a>
+  <!-- Mobile Navigation -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+
+  <!-- Dropdown for Rooms -->
+  <div class="mobile-dropdown">
+    <button class="dropbtn">Accommodations ▾</button>
+    <div class="mobile-dropdown-content">
+      <a href="rooms.html#student">Student </a>
+      <a href="rooms.html#exclusive">Exclusive</a>
+    </div>
   </div>
+
+  <a href="featuredactivities.html">Featured Activities</a>
+  <a href="host.html">Become a Host</a>
+  <a href="partners.html">Partners</a>
+</div>
+
 </header>
 
     <section class="partners">
